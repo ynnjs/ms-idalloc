@@ -1,11 +1,11 @@
 {
-	"name": "yolk-app-idalloc",
+	"name": "ynn-ms-idalloc",
 	"description": "",
-	"repository": "git@git.kangfuzi.com:frontend/ms-services/ms-token.git",
+	"repository": "https://github.com/ynnjs/ynn-ms-idalloc.git",
 	"version": "0.0.0",
 	"keywords": [
 		"koa",
-		"yolk",
+		"ynn",
 		"flakeid",
 		"snowflake",
 		"idalloc"
@@ -15,7 +15,7 @@
 	],
 	"main": "src/index.js",
 	"bin": {
-		"yolk-app-idalloc": "src/index.js"
+		"ynn-ms-idalloc": "src/index.js"
 	},
 	"devDependencies": {
 		"@lvchengbin/sequence": "^1.1.8",
@@ -27,10 +27,10 @@
 	"license": "MIT",
 	"dependencies": {
 		"@lvchengbin/is": "0.0.18",
-		"@lvchengbin/yolk": "^0.1.7",
 		"biguint-format": "^1.0.0",
 		"flake-idgen": "^1.1.0",
-		"yargs": "^12.0.1"
+		"yargs": "^12.0.1",
+		"ynn": "0.0.0"
 	},
 	"scripts": {
 		"demo": "nodemon src/index.js",

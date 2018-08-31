@@ -1,7 +1,7 @@
 const Flake = require( 'flake-idgen' );
 const intformat = require( 'biguint-format' );
 
-module.exports = class extends require( '@lvchengbin/yolk' ).Controller {
+module.exports = class extends require( 'ynn' ).Controller {
     /**
      * to generate a flake id
      * @get {string} format - the format of the return value, supporting dec, bin, hex and oct. to get more information from https://github.com/T-PWK/biguint-format
