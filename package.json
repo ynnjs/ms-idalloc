@@ -1,0 +1,48 @@
+{
+	"name": "yolk-app-idalloc",
+	"description": "",
+	"repository": "git@git.kangfuzi.com:frontend/ms-services/ms-token.git",
+	"version": "0.0.0",
+	"keywords": [
+		"koa",
+		"yolk",
+		"flakeid",
+		"snowflake",
+		"idalloc"
+	],
+	"files": [
+		"src"
+	],
+	"main": "src/index.js",
+	"bin": {
+		"yolk-app-idalloc": "src/index.js"
+	},
+	"devDependencies": {
+		"@lvchengbin/sequence": "^1.1.8",
+		"@lvchengbin/sleep": "0.0.2",
+		"jasmine": "^3.2.0",
+		"nodemon": "^1.18.4",
+		"supertest": "^3.1.0"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"@lvchengbin/is": "0.0.18",
+		"@lvchengbin/yolk": "^0.1.7",
+		"biguint-format": "^1.0.0",
+		"flake-idgen": "^1.1.0",
+		"yargs": "^12.0.1"
+	},
+	"scripts": {
+		"demo": "nodemon src/index.js",
+		"debug": "nodemon src/index.js --debugging=true --port=50009",
+		"test-watch": "nodemon --exec npm test",
+		"test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
+		"t": "jasmine ",
+		"tw": "nodemon --exec jasmine ",
+		"test-id": "jasmine test/id.spec.js",
+		"test-jwt": "jasmine test/jwt.spec.js",
+		"test-code": "jasmine test/code.spec.js",
+		"lint": "eslint ./ --cache --ignore-path .eslintignore",
+		"precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+	}
+}
