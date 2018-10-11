@@ -11,7 +11,7 @@ module.exports = class extends require( 'ynn' ).Controller {
      * }
      */
     async indexAction() {
-        const flake = new Flake( this.config( 'id' ) );
+        const flake = new Flake( this.config( 'flake' ) );
         const { format = 'dec' } = this.ctx.query;
 
         let id;
