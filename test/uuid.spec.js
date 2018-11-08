@@ -1,4 +1,4 @@
-const Ynn = require( 'Ynn' );
+const Ynn = require( 'ynn' );
 const request = require( 'supertest' );
 const iu = require( 'is-uuid' );
 const app = require( '../src' );

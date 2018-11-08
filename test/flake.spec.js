@@ -1,4 +1,4 @@
-const Ynn = require( 'Ynn' );
+const Ynn = require( 'ynn' );
 const request = require( 'supertest' );
 const app = require( '../src' );
 
