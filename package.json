@@ -1,15 +1,17 @@
 {
 	"name": "ynn-ms-idalloc",
-	"description": "",
+	"description": "Ynn micro-service module for ID allocation. Supported FlakeID and UUID.",
 	"repository": "https://github.com/ynnjs/ynn-ms-idalloc.git",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"keywords": [
 		"koa",
 		"ynn",
 		"flakeid",
 		"snowflake",
 		"idalloc",
-		"uuid"
+		"uuid",
+        "id",
+        "unique"
 	],
 	"main": "src/index.js",
 	"bin": {
@@ -36,7 +38,7 @@
 	"scripts": {
 		"start": "nodemon src",
 		"debug": "nodemon src --debugging=true",
-		"test": "jest",
+		"test": "jest --forceExit",
 		"test-watch": "jest --watch",
 		"test-cov": "jest --coverage --runInBand --forceExit --detectOpenHandles",
 		"lint": "eslint src --cache --ignore-path .eslintignore",
