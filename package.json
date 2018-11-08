@@ -30,6 +30,9 @@
 		"uuid": "^3.3.2",
 		"ynn": "0.0.12"
 	},
+    "engines": {
+        "node": ">=8.0"
+    },
 	"scripts": {
 		"start": "nodemon src",
 		"debug": "nodemon src --debugging=true",
