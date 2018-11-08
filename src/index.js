@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 
-const argv = require( 'yargs' ).argv;
 const Ynn = require( 'ynn' );
-const app = new Ynn( { root : __dirname } );
+const app = new Ynn( {
+    root : __dirname,
+    routers() {
+        this.router.add( /^\/uuid\/(v[35])/, 'uuid.v35' );
+        this.router.add( /^\/uuid\/(v[14])/, 'uuid.v14' );
+    }
+} );
 
-if( require.main === module ) {
-    app.listen( argv.port );
-}
-
+module.parent || app.listen( Ynn.cargs.port );
 module.exports = app;

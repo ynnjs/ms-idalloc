@@ -1,6 +1,6 @@
 # ynn-ms-idalloc
 
-Ynn micro-service module for ID allocation.
+Ynn micro-service module for ID allocation. Supported FlakeID and UUID.
 
 ## Installation
 
@@ -10,7 +10,7 @@ $ npm install ynn-ms-idalloc --save
 
 ## Usage
 
-### Starting a server
+### Starting as a indenpent service
 
 ```bash
 $ npx ynn-ms-idalloc --port=3000
@@ -47,3 +47,26 @@ Generating SnowFlake ID is using [https://github.com/T-PWK/flake-idgen](https://
 #### /flake
 
 To generate a SnowFlake ID.
+
+
+#### /uuid/v1
+
+To generate UUID version 1
+
+#### /uuid/v3?name={name}&namespace={namespace}
+
+To generate UUID version 3
+
+#### /uuid/v4
+
+To generate UUID version 4
+
+#### /uuid/v5?name={name}&namespace={namespace}
+
+__Note__: While generating UUID v3 and v5, the namespace can be a pre-defined namespace name in [ dns, url, oid, x500 ] defind in [RFC4122](http://www.ietf.org/rfc/rfc4122.txt). For example:
+
+```
+/uuid/v5?name={name}&namespace=url
+```
+
+To generate UUID version 5

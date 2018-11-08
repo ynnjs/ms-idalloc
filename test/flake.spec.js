@@ -1,41 +1,26 @@
+const Ynn = require( 'Ynn' );
 const request = require( 'supertest' );
-const Console = require( 'ynn' ).Console;
 const app = require( '../src' );
 
-app.debugging = Console.WARN | Console.ERROR;
+app.debugging = Ynn.DEBUGGING_WARN| Ynn.DEBUGGING_ERROR;
 
-describe( 'flake', () => {
-    const ids = new Set();
-
-    afterAll( () => {
-        expect( ids.size ).toEqual( 100 );
+describe( 'Flake ID', () => {
+    beforeAll( () => app.ready() );
+    it( 'should generate the flake id', done => {
+        request( app.listen() ).get( '/flake' )
+            .expect( 200 )
+            .expect( res => {
+                expect( res.body.id ).toMatch( /^\d+$/ );
+            } )
+            .end( err => err ? done.fail( err ) : done() );
     } );
 
-    for( let i = 0; i < 100; i += 1 ) {
-        it( 'basic ' + i, done => {
-            request( app.listen() ).get( '/flake' )
-                .expect( 200 )
-                .expect( res => {
-                    expect( /^\d+$/.test( res.body.id ) ).toBeTruthy();
-                } )
-                .end( ( err, res ) => {
-                    if( err ) {
-                        done.fail( err );
-                        return;
-                    }
-                    ids.add( res );
-                    done() 
-                } );
-        } );
-    }
-
-    it( 'hex', done => {
+    it( 'should be formatted as hex string', done => {
         request( app.listen() ).get( '/flake?format=hex' )
             .expect( 200 )
             .expect( res => {
-                expect( /^[a-z0-9]+$/.test( res.body.id ) ).toBeTruthy();
+                expect( res.body.id ).toMatch( /^[a-z0-9]+$/ );
             } )
             .end( err => err ? done.fail( err ) : done() );
     } );
 } );
-
