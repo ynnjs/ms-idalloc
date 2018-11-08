@@ -16,7 +16,7 @@ const namespaces = {
     x500 : '6ba7b814-9dad-11d1-80b4-00c04fd430c8'
 };
 
-module.exports = class extends require( 'Ynn' ).Controller {
+module.exports = class extends require( 'ynn' ).Controller {
     v14Action() {
         const ver = this.ctx.routerMatches[ 0 ];
         return { uuid : uuid[ ver ]() };
