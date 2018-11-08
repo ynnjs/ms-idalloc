@@ -23,4 +23,10 @@ describe( 'Flake ID', () => {
             } )
             .end( err => err ? done.fail( err ) : done() );
     } );
+
+    it( 'should respond 500 while using unsupported format', done => {
+        request( app.listen() ).get( '/flake?format=unsupported' )
+            .expect( 400 )
+            .end( done )
+    } );
 } );

@@ -13,18 +13,12 @@ module.exports = class extends require( 'ynn' ).Controller {
     async indexAction() {
         const flake = new Flake( this.config( 'flake' ) );
         const { format = 'dec' } = this.ctx.query;
+        const id = intformat( flake.next(), format ); 
 
-        let id;
-
-        try {
-           id = intformat( flake.next(), format ); 
-        } catch( e ) {
-            this.logger.error( 'failed to generate id with flake-idgen', {
-                query : this.ctx.query,
-                error : e
-            } );
-            this.throw( 500 );
+        if( !id ) {
+            this.throw( 400, 'unsupported format' );
         }
+
         return { id };
     }
 }

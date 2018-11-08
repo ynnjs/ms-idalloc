@@ -2,6 +2,13 @@
 
 Ynn micro-service module for ID allocation. Supported FlakeID and UUID.
 
+ [![Build Status](https://travis-ci.com/ynnjs/ynn-ms-idalloc.svg?branch=master)](https://travis-ci.com/ynnjs/ynn-ms-idalloc)
+ [![Coverage Status](https://img.shields.io/codecov/c/github/ynnjs/ynn-ms-idalloc.svg?style=flat)](https://codecov.io/gh/ynnjs/ynn-ms-idalloc)
+ [![Node Version](https://img.shields.io/node/v/ynn-ms-idalloc.svg)](https://nodejs.org)
+ [![License](https://img.shields.io/npm/l/ynn-ms-idalloc.svg)](https://en.wikipedia.org/wiki/MIT_License)
+ [![NPM Version](https://img.shields.io/npm/v/ynn-ms-idalloc.svg)](https://www.npmjs.com/package/ynn-ms-idalloc)
+ [![NPM Download](https://img.shields.io/npm/dw/ynn-ms-idalloc.svg)](https://www.npmjs.com/package/ynn-ms-idalloc)
+
 ## Installation
 
 ```bash
