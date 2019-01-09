@@ -2,7 +2,7 @@
 	"name": "ynn-ms-idalloc",
 	"description": "Ynn micro-service module for ID allocation. Supported FlakeID and UUID.",
 	"repository": "https://github.com/ynnjs/ynn-ms-idalloc.git",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"keywords": [
 		"koa",
 		"ynn",
@@ -30,7 +30,7 @@
 		"biguint-format": "^1.0.0",
 		"flake-idgen": "^1.1.0",
 		"uuid": "^3.3.2",
-		"ynn": "0.0.14"
+		"ynn": "0.0.18"
 	},
 	"engines": {
 		"node": ">=8.0"
