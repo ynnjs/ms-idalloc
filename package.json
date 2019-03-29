@@ -30,7 +30,7 @@
 		"biguint-format": "^1.0.1",
 		"flake-idgen": "^1.1.2",
 		"uuid": "^3.3.2",
-		"ynn": "0.0.44"
+		"ynn": "0.0.45"
 	},
 	"engines": {
 		"node": ">=8.0"
